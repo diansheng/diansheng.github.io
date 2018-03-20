@@ -2,8 +2,6 @@
 published: true
 ---
 
-
-
 ## Summary of Chapter 2, End-to-End Machine Learning Project ##
 
 *This article is part of a series of summaries on the book Hands-On Machine Learning with Scikit-Learn and TensorFlow. This article summaries machine learning process in plain languages. Surprisingly, the most important isn't the models...*
