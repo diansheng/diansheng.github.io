@@ -40,7 +40,7 @@ housing.hist(bins=50, figsize=(20,15))
 plt.show()
 ```
 
-![Histogram](../images/hist.png "Histogram")
+![Histogram](/images/hist.png "Histogram")
 
 ** Feature correlations **
 
@@ -50,13 +50,13 @@ A quick and efficient way to understand how "related" a feature with the goal is
 scatter_matrix(housing[attributes], figsize=(12, 8))
 ```
 
-![Correlation](correlation.png "Correlation")
+![Correlation](/images/correlation.png "Correlation")
 
 **Geographical**
 
 If the data has geographical or geometric nature, plotting against the nature shape of the data will be very helpful too. 
 
-![Geographical](geographical.png "Geographical")
+![Geographical](/images/geographical.png "Geographical")
 
 ### Secondly, prepare the data
 
