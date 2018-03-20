@@ -40,7 +40,7 @@ housing.hist(bins=50, figsize=(20,15))
 plt.show()
 ```
 
-![Histogram](/images/hist.png "Histogram")
+![Histogram](/images/hist.PNG "Histogram")
 
 ** Feature correlations **
 
@@ -50,13 +50,13 @@ A quick and efficient way to understand how "related" a feature with the goal is
 scatter_matrix(housing[attributes], figsize=(12, 8))
 ```
 
-![Correlation](/images/correlation.png "Correlation")
+![Correlation](/images/correlation.PNG "Correlation")
 
 **Geographical**
 
 If the data has geographical or geometric nature, plotting against the nature shape of the data will be very helpful too. 
 
-![Geographical](/images/geographical.png "Geographical")
+![Geographical](/images/geographical.PNG "Geographical")
 
 ### Secondly, prepare the data
 
@@ -95,6 +95,3 @@ It is fun to try and build models. And it is more meaningful to finally put it i
 The content is my sharing of summaries on chapters in the book *Hands-On Machine Learning with Scikit-Learn and TensorFlow* from O'Reilly. The source codes are from either the book or this GitHub repository https://github.com/ageron/handson-ml.
 
 This book is a really good book for beginners. It introduces the machine learning with two of the most popular machine learning tools, TensorFlow and Scikit-Learn. What's more, it does not require deep maths and programming knowledge as pre-requisites. All you need to know is the very basic of Python.
-
-
-
