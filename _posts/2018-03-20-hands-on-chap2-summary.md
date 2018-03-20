@@ -40,7 +40,7 @@ housing.hist(bins=50, figsize=(20,15))
 plt.show()
 ```
 
-![Histogram](hist.png "Title")
+![Histogram](../images/hist.png "Histogram")
 
 ** Feature correlations **
 
