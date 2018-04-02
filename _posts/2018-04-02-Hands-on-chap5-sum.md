@@ -23,6 +23,7 @@ Support Vector Machine (SVM) is a very powerful and versatile Machine Learning m
 
 ** IMPORTANT!!! It is especially useful for classification of complex but small- or medium-sized datasets. **  
 
+
 ** 敲黑板！！！ 向量机尤其适合应用于复杂的中小数据的分类问题 **  
 
 ## Linear SVM Classification 线性向量机分类问题
