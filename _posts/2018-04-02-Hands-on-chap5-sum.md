@@ -22,9 +22,10 @@ Support Vector Machine (SVM) is a very powerful and versatile Machine Learning m
 向量机很好很强大。可以用到很多方面。
 
 ** IMPORTANT!!! It is especially useful for classification of complex but small- or medium-sized datasets. **  
+
 ** 敲黑板！！！ 向量机尤其适合应用于复杂的中小数据的分类问题 **  
 
-### Linear SVM Classification 线性向量机分类问题
+## Linear SVM Classification 线性向量机分类问题
 
 We can think the classification problem is to separate datasets into different groups with minimum uncertainty, while different models give different definitions of "uncertainty".  
 
@@ -38,7 +39,7 @@ On the other hand, SVM does not consider all data points, not even the majority 
 
 ![soft margin formulation](../images/chap5_largest_margin.png)
 
-#### Hard Margin （暂翻译为硬边际）
+### Hard Margin （暂翻译为硬边际）
 
 Let's assume the datasets are linearly separatable. That is to say, there exists a hyperplane that can completely and cleanly separate the datasets into different classes. In a 2-D 2-classes case, there exists a line separating the datasets. So here is the question, as there are more than one possible lines, which one gives minimum uncertainty? To answer this question, let's first define a margin variable as the distance from the hyperplane to the nearest training data point of any class. In SVM, the larger this distance is, the less uncertainty there is. The score function is to maximize this distance. 
 
@@ -50,7 +51,7 @@ Here is the objective function for hard margin linear SVM. (It is Ok if you do n
 
 ![hard margin formulation](../images/chap5_hard_margin_formulation.png)
 
-#### Soft Margin （暂翻译为软边际）
+### Soft Margin （暂翻译为软边际）
 
 What if the datasets are not separatable? Then we need soft margin. We use a parameter *C* to adjust the "softness". Another advantage of soft margin is insensitive to outliers. The "softer" the model is, the model is more tolerable to margin violations.
 
@@ -65,7 +66,7 @@ Here is the objective function for hard margin linear SVM. (It is Ok if you do n
 
 ![soft margin formulation](../images/chap5_soft_margin_formulation.png)
 
-### Nonlinear SVM Classification  非线性向量机分类
+## Nonlinear SVM Classification  非线性向量机分类
 
 It is ideal if datasets can be linearly separated by a straight line. However, life is hard. We have to handle non-linear cases. The approach is to transform explanatory variables (X) so that the problem can be fitted to linear SVM. The original datasets (left) cannot be separated by a line. However, after transforming X into higher-dimension datasets like the figure on the right.
 
@@ -85,7 +86,7 @@ SVC(kernel="rbf", gamma=5, C=0.001) # Gaussian RBF Kernel
 ```
 
 
-### SVM Regression  向量机回归
+## SVM Regression  向量机回归
 
 For a regression problem, we usually picture the data points are scattered around the fitted line. Comparably, in a classification problem, the data points are scattered away from the borderline. So do you notice the similarity? Yes, by reversing the idea of SVM classifier, we obtain the SVM regressor. Instead of trying to exclude as many data points as possible in the border band in SVM classifier, we try to include as many data points in the regression line band in SVM regressor. 
 
