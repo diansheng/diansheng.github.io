@@ -19,12 +19,15 @@ Here is the structure of this summary. 这是本总结的结构
 3. SVM Regression  向量机回归
 
 Support Vector Machine (SVM) is a very powerful and versatile Machine Learning model. It can be applied to many types of problems, classification, regression, etc. 
-向量机很好很强大。可以用到很多方面。
+向量机很好很强大。可以用到很多方面。 
+
 ------  
 **IMPORTANT!!! It is especially useful for classification of complex but small- or medium-sized datasets.**  
 
 **敲黑板！！！ 向量机尤其适合应用于复杂的中小数据的分类问题**  
+
 ------  
+
 ## Linear SVM Classification 线性向量机分类问题
 
 We can think the classification problem is to separate datasets into different groups with minimum uncertainty, while different models give different definitions of "uncertainty".  
