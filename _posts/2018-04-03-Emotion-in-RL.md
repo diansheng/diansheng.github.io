@@ -1,10 +1,8 @@
 ---
 published: true
 layout: post
-title: ''
+title: 'Summary of Emotion in reinforcement learning agents and robots: a survey'
 ---
-# Summary of _Emotion in reinforcement learning agents and robots: a survey_
-
 _The original paper can be found [atXiv.org](https://arxiv.org/abs/1705.05172)_ 
 
 
