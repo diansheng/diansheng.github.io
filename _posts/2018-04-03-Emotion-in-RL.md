@@ -1,7 +1,7 @@
 ---
 published: true
 layout: post
-title: 'Summary of _Emotion in reinforcement learning agents and robots: a survey_'
+title: ''
 ---
 # Summary of _Emotion in reinforcement learning agents and robots: a survey_
 
