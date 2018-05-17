@@ -1,14 +1,10 @@
 ---
-published: false
+published: true
 layout: post
-title: 'Summary of Chapter 4, Regression'
+title: 'Summary of Chapter 4, Regression 第四章总结， 回归问题 '
 ---
 
-## Summary of Chapter 4, Regression 第四章总结， 回归问题 ##  
-
-*This article is part of a series of summaries on the book Hands-On Machine Learning with Scikit-Learn and TensorFlow. The summaries are meant to explain machine learning concepts and ideas, instead of covering the maths and models.* 
-
-*本文是《Hands-On Machine Learning with Scikit-Learn and TensorFlow》这本书的总结随笔系列的一部分。总结旨在解释机器学习的观念和想法，而不是数学和模型*
+How much is a 1000 square feet house? How many customers can I expect tomorrow? Let's take a look at machine learning approach on regression problem. 百平米房子多少钱？明天能来多少顾客？让我们看一下机器学习如何解决回归问题。
 
 In this chapter summary, I will show how linear and logistic regression works. Linear algebra behind the model is not the focus.
 
@@ -28,7 +24,7 @@ Here is the structure of this summary. 这是本总结的结构
 
 When you have more than one feature, use **Multivariant linear regression**. If the data is more complex than a straight line or hyperplane, use **Polynomial linear regression**.
 
-**简单线性回归** 是最基本的机器模型之一。被统计学家从各个角度研究，比如闭式解，ANOVA 测试，confidence interval, confidence band, prediction interval, residual variance check, p-value on each parameter, 等等。而相比来讲，机器学习家们对 cross-validation, hyper-parameter tuning, memory and time complexity, underfitting and overfitting, learning rate 更感兴趣。管中窥豹，我们可以看出统计和机器学习在方法和目标上的区别。
+**简单线性回归** 是最基本的机器模型之一。被统计学家从各个角度研究，比如闭式解，ANOVA 测试，置信区间, confidence band, prediction interval, residual variance check, p值, 等等。而相比来讲，机器学习家们对 cross-validation, 超参调整, 时间和内存复杂性, 欠拟合和过拟合, learning rate 更感兴趣。管中窥豹，我们可以看出统计和机器学习在方法和目标上的区别。
 
 当不止一个变量时，可以用**Multivariant linear regression**。如果数据不只是简单的直线或平面，可以用**Polynomial linear regression**。
 
@@ -50,7 +46,7 @@ Just to make the picture complete, I need to mention a combined version of the t
 
 之前两种算法结合起来，有**小批量梯度下降**算法。
 
-![gradient descent](images/chap4 gradient descent.png)
+![gradient descent](../images/handson/chap4_gradient_descent.png)
 
 It worth mentioning the learning rate hyper-parameter. If the learning rate is too large, you end up jumping around the optimal solution instead of hitting it. If the learning rate is too small, the training can take a long time. Also, small learning rate may lead you to the trap of local minimal. 
 
@@ -68,10 +64,7 @@ plt.rcParams['axes.labelsize'] = 14
 plt.rcParams['xtick.labelsize'] = 12
 plt.rcParams['ytick.labelsize'] = 12
 %matplotlib inline
-```
 
-
-```python
 X = 2 * np.random.rand(100, 1)
 y = 4 + 3 * X + np.random.randn(100, 1)
 from sklearn.linear_model import SGDRegressor
@@ -80,18 +73,15 @@ sgd_reg.fit(X, y.ravel())
 sgd_reg.intercept_, sgd_reg.coef_
 ```
 
-
-
-
-    (array([3.80549194]), array([3.28373567]))
-
-
+```
+(array([3.80549194]), array([3.28373567]))
+```
 
 #### Regularization 正则
 
 The performance of the model can be evaluated with validation set. For example, errors plot for both training set and validation set gives a very good idea of how well the model is. Here is a figure of error vs training size set.
 
-模型的表现可以用validation set来评估。比较training set和validation set的残留曲线，我们可以很好了解模型的表现。如下
+模型的表现可以用验证集来评估。比较训练集和验证集的残留曲线，我们可以很好了解模型的表现。如下
 
 
 ```python
@@ -108,20 +98,15 @@ def plot_learning_curves(model, X, y):
         val_errors.append(mean_squared_error(y_val_predict, y_val))
     plt.plot(np.sqrt(train_errors), "r-+", linewidth=2, label="train")
     plt.plot(np.sqrt(val_errors), "b-", linewidth=3, label="val")
-```
 
 
-```python
 from sklearn.linear_model import LinearRegression
 lin_reg = LinearRegression()
 plot_learning_curves(lin_reg, X, y)
 ```
 
 
-![png](output_22_0.png)
-
-
-![learning curve](images/chap4 learning curve.png "Learning curve")
+![learning curve](../images/handson/chap4_learning_curve.png "Learning curve")
 
 If the gap between training and validation set is very big, the model is probably overfitting.
 To reduce overfitting, regularization is added to the model. Three approaches are commonly used.
@@ -144,11 +129,10 @@ A comparison table says 100 times more than words.
 
 逻辑回归是基本的分类模型之一。在大部分机器学习的学习材料中，因为模型有很多共通的地方，逻辑回归通常接在线性回归后介绍。
 
-其中一个不同的地方是cost function。线性回归的结果是 $(-\infty,\infty)$ 的。逻辑回归正是要把 $(-\infty,\infty)$ 转换到$(0,1)$。而$(0,1)$正好是概率的范围。对于二分类，用**Logit regression**作为转换的方程。对于多类分类，用**Softmax regression**。相应的，cost function也不同了，是log probability的均值。说一万字，不如上图。
+其中一个不同的地方是cost function。线性回归的结果是 $(-\infty,\infty)$ 的。逻辑回归正是要把 $(-\infty,\infty)$ 转换到$(0,1)$。而$(0,1)$正好是概率的范围。对于二分类，用**Logit regression**作为转换的方程。对于多类分类，用**Softmax regression**。相应的，cost function也不同了，是log probability的均值。说一万字，不如上表格。
 
-| Classification problem        |      Binary (Two-classes) Classification problem   | Multi-class Classification problem   |
-| ------------- |:-------------:| -----:|
-| score function      | $S(X)=\theta^T X$  | $S_k(X)=\theta_k^T X$ (softmax score)|
-| $\sigma$ function | sigmoid function $\sigma(t)=\frac{1}{1+e^{-t}}$ | softmax function $\sigma(S_i)=\frac{exp(S_i)}{\sum_i^K exp(S_i)}$  |
-| probability      | $p=\sigma(S(X))$  | $p_k=\sigma(S_k(X))$ |
-| cost function | $-\frac{1}{n}\sum_i^n {y_ilog\hat{p_i}+(1-y_i)log(1-\hat{p_i})}$      |    $-\frac{1}{n}\sum_i^n \sum_k^K y_{k,i} log(\hat{p}_{k,i})$ |
+![Score function table](../images/handson/chap4_score_function.png)
+
+
+*This article is part of a series of summaries on the book Hands-On Machine Learning with Scikit-Learn and TensorFlow. The summaries are meant to explain machine learning concepts and ideas, instead of covering the maths and models.* 
+*本文是《Hands-On Machine Learning with Scikit-Learn and TensorFlow》这本书的总结随笔系列的一部分。总结旨在解释机器学习的观念和想法，而不是数学和模型*

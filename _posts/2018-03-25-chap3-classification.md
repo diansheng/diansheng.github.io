@@ -1,14 +1,10 @@
 ---
-published: false
+published: true
 layout: post
-title: 'Summary of Chapter 3, Classification'
+title: 'Summary of Chapter 3, Classification 第三章总结， 分类问题'
 ---
 
-## Summary of Chapter 3, Classification 第三章总结， 分类问题 ##  
-
-*This article is part of a series of summaries on the book Hands-On Machine Learning with Scikit-Learn and TensorFlow. The summaries are meant to explain machine learning concepts and ideas, instead of covering the maths and models.* 
-
-*本文是《Hands-On Machine Learning with Scikit-Learn and TensorFlow》这本书的总结随笔系列的一部分。总结旨在解释机器学习的观念和想法，而不是数学和模型*
+Will this stock price rise? Is this merchant trustworthy? Let's take a look at machine learning approach on classification problems. 股票会不会涨？卖家是否诚信？让我们看看机器学习如何解决分类问题。
 
 This article opens a door to classification problems in machine learning, from the simple binary classification to more complex classification problems.
 1. Binary Classification
@@ -20,8 +16,8 @@ This article opens a door to classification problems in machine learning, from t
 3. Multiclass Classification
 4. Models
 
-本文敞开了通往机器学习分类问题的大门，从简单的 binary classification 到复杂的分类问题。内容简介如下
-1. 二项分类
+本文敞开了通往机器学习分类问题的大门，从简单的二分类到复杂的分类问题。内容简介如下
+1. 二分类
 2. 表现评估
     * Cross-validation
     * Confusion Matrix
@@ -30,18 +26,18 @@ This article opens a door to classification problems in machine learning, from t
 3. 多项分类
 4. 模型
 
-### Binary Classification 二项分类
+### Binary Classification 二分类
 
 If someone does not know MNIST dataset, he probably does not know much of classification problems. Just like programmers printing "hello world" for trying a new language, machine learners usually use MNIST datasets for trying a new classification algorithm.  
 So what is this magical dataset? It is a dataset of handwritten digits from 0 to 9. For example, here is number 5.
 
 如果某人不知道MNIST数据，那么他对分类问题很可能所知有限。就像程序员每当学新的语言总要展示"hello world"一样，机器学习家也总用MNIST数据来实验新的分类算法。那么这神奇的数据集是什么呢？它是一个手写数字的数据集。比如说下面的数字5
 
-![5](images/chap3_mnist_digit.png "number")
+![5](../images/handson/chap3_mnist_digit.png "number")
 
 Binary classification, apparently, means classifying instances into two classes, "Yes" or "No", "Go" or "No Go", etc. You can probably guess that this type of algorithms is great for decision making or identification. And you are right. 
 
-二项分类，很明显，意味着把数据分成两类，“是”或“否”，“行”或“不行”，等等。不难猜到，这类算法用来做决定和识别会很棒。
+二分类，很明显，意味着把数据分成两类，“是”或“否”，“行”或“不行”，等等。不难猜到，这类算法用来做决定和识别会很棒。
 
 ### Performance Measures 表现评估  
 
@@ -69,14 +65,14 @@ Nevertheless, as I mentioned in the chapter 2 summary, while accuracy is good, s
 To discuss alternative performance measures, I need to first introduce confusion matrix as the picture below. 
 所以我们需要介绍其他的表现评估标准。首先，介绍confusion matrix如下图
 
-![confusion matrix](images/confusion_matrix.png "Confusion Matrix")
+![confusion matrix](../images/handson/chap3_confusion_matrix.png "Confusion Matrix")
 
 Here are a few definitions.
 一些定义 
 
-**Precision**: Ratio of true(correct) predictions among all postive predictions.  所有阳性的预测中正确预测的比率
-**Recall**: Ratio of positive predictions among all true predictions, aka **sensitivity** or **true postive rate**  所有正确的预测结果的中阳性预测的比率。也叫做**sensitivity**或者**true postive rate** 
-**$F_1$** : A score to combine both precision and recall. precision和recall两种数据的综合分数
+**Precision**: Ratio of true(correct) predictions among all positive predictions.  所有阳性的预测中正确预测的比率
+**Recall**: Ratio of positive predictions among all true predictions, aka **sensitivity** or **true positive rate**  所有正确的预测结果的中阳性预测的比率。也叫做**sensitivity**或者**true positive rate** 
+**$F_1$**: A score to combine both precision and recall. precision和recall两种数据的综合分数
 
 $$
 precision = \frac{TP}{TP + FP} \\
@@ -86,7 +82,7 @@ $$
 Most of the time, a rise in precision leads to a drop in recall. That's also why we need to find a balance using $F_1$ score.
 通常，precision的升高会导致recall减少。因此我们需要用$F_1$分数来找平衡点。
 
-![precision_recall_curve](images/precision_recall_curve.png "precision_recall_curve")
+![precision_recall_curve](../images/handson/chap3_precision_recall_curve.png "precision_recall_curve")
 
 To balance the two metrics, $F_1$ score is introduced as a combined metric.
 
@@ -105,7 +101,7 @@ specificity = true\ negative\ rate(TNR)=\frac{TN}{TN+FP} \\
 ROC=\frac{TPR}{FPR}=\frac{TPR}{1-TNR}=\frac{sensitivity}{1-specificity}
 $$
 
-![roc curve](images/roc_curve.png "roc_curve")
+![roc curve](../images/handson/chap3_roc_curve.png "roc_curve")
 
 ### Multiclass classification 多项分类
 
@@ -122,6 +118,11 @@ To avoid introducing too many concepts at the same time, I have intended not to 
 * Nearest Neighborhood  近邻算法
 * Decision Tree  决策树
 * Random Forest  随机森林
-* Native Bayes  贝叶斯算法
-* XGBoost (It is more a tool than a model. But I feel it is necessary to mention it as it performs extremely well on Kaggle.) （XGBoost其实是一个库，而不是模型，不过在kaggle里表现非常好，因此提及）
+* Native Bayes  朴素贝叶斯算法
+* XGBoost (It is more a tool than a model. But I feel it is necessary to mention it as it performs extremely well on Kaggle.) （XGBoost其实是一个库，而不是模型，不过在kaggle里表现非常好，因此有必要）
 * Neural Network  神经网络
+
+
+*This article is part of a series of summaries of the book Hands-On Machine Learning with Scikit-Learn and TensorFlow. The summaries are meant to explain machine learning concepts and ideas, instead of covering the maths and models.* 
+
+*本文是《Hands-On Machine Learning with Scikit-Learn and TensorFlow》这本书的总结随笔系列的一部分。总结旨在解释机器学习的观念和想法，而不是数学和模型*
