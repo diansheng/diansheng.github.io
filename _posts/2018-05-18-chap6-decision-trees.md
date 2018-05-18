@@ -47,7 +47,7 @@ Now we need some measurements of impurity. Here are two common ones.
 * __Entropy__ __熵__  
 !['Entropy'](../images/handson/chap6_entropy.png){: .center-image }  
 
-subscript $i$ is for nodes, subscript $k$ for classes. For example, in the decision tree shown just now, at the top-level node, $p_{i,1}=p_{i,2}=p_{i,3}=\frac{50}{150}=0.33$. $G_i=1-\sum_{k=1}^3p_{i,k}^2=1-3*0.33*0.33=0.667$.  
+subscript $i$ is for nodes, subscript $k$ for classes. For example, in the decision tree shown just now, at the top-level node, $p_{i,1}=p_{i,2}=p_{i,3}=\frac{50}{150}=0.33$ , $G_i=1-\sum_{k=1}^3p_{i,k}^2=1-3*0.33*0.33=0.667$  
 其中，角标$i$是节点，角标$k$对应类。在之前的决策树例子中，在初始节点，$p_{i,1}=p_{i,2}=p_{i,3}=\frac{50}{150}=0.33$. $G_i=1-\sum_{k=1}^3p_{i,k}^2=1-3*0.33*0.33=0.667$。  
 
 It is easy to tell that these two metric changes almost the same way when $p_{i,k}$ changes. So they are almost equivalent.  
