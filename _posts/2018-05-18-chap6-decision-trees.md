@@ -25,7 +25,7 @@ Like SVMs (introduced in Chapter 5 Summary), Decision Trees are versatile Machin
 
 What is a decision tree? Decision Trees are tree-like models, where each node contain a subset of the datasets and, if it is a nonleaf node, makes decisions on how the subset can be further split into more branches.  
 决策树是树形模型。每个节点包含了数据集的子集。在非终端节点上，节点对于如何继续分割子集作出决策。  
-!['Decision Tree'](../images/handson/chap6_iris_tree.png){: .center-image }
+!['Decision Tree'](../images/handson/chap6_iris_tree.png){: .center-image }  
 In the chart above, there are 150 samples in the top-level node. These samples are split into two subsets based on whether their *pental length<=2.45*.  
 在上图中，初始节点（顶层节点）有150个样本。然后根据*pental length<=2.45*的标准，分成了两个子集。
 
