@@ -1,9 +1,10 @@
 ---
 published: true
 layout: post
-title: 'Summary of Emotion in reinforcement learning agents and robots: a survey'
+title: 'OpenAI Spinning Up'
+date: 2020-12-20
 ---
-_The original paper can be found [atXiv.org](https://arxiv.org/abs/1705.05172)_ 
+_The original article can be found [spinningup.openai.com](https://arxiv.org/abs/1705.05172)_ 
 
 
 ## Introduction
