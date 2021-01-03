@@ -6,7 +6,7 @@
 name: diansheng
 
 # Short bio or description (displayed in the header)
-description: a machine learner
+description: a machine learning enthusiast
 
 # URL of your avatar or profile pic (you could use your GitHub profile pic)
 avatar: https://avatars1.githubusercontent.com/u/1451996?s=40&v=4
@@ -21,7 +21,7 @@ footer-links:
   email:
   facebook:
   flickr:
-  github: barryclark/jekyll-now
+  github: diansheng/diansheng.github.io
   instagram:
   linkedin:
   pinterest:
