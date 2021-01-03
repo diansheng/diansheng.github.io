@@ -2,6 +2,7 @@
 published: false
 layout: post
 title: '论文摘要 - 机器人和强化学习中的感情的调查研究'
+notes: 'This article is requires more translation. And I have no plan to complete it in any near future.'
 ---
 _论文原文可以在此找到 [atXiv.org](https://arxiv.org/abs/1705.05172)_ 
 
