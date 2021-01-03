@@ -1,5 +1,5 @@
 ---
-published: false
+published: true
 layout: post
 title: 'My experience with OpenAI Spinning Up'
 date: 2020-12-20
