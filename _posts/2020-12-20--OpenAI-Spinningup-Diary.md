@@ -51,14 +51,14 @@ conda activate openai_env
 pip install -U 'mujoco-py<2.1,>=2.0'
 ```
 
-#### Error message: GLEW initalization error: Missing GL version
+#### Solve Error: GLEW initalization error: Missing GL version
 OS: Ubuntu 20.04
-Step 1
-Run update command to update package repositories and get the latest package information.
+
+Step 1: Run update command to update package repositories and get the latest package information.
 `sudo apt-get update -y`
-Step 2
-flag to quickly install the packages and dependencies.
+
+Step 2: flag to quickly install the packages and dependencies.
 `sudo apt-get install -y libglew-dev`
 Got these from : https://zoomadmin.com/HowToInstall/UbuntuPackage/libglew-dev
-Step 3:
-`export LD_PRELOAD=/usr/lib/x86_64-linux-gnu/libGLEW.so`
+
+Step 3:`export LD_PRELOAD=/usr/lib/x86_64-linux-gnu/libGLEW.so`
