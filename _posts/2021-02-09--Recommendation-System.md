@@ -24,6 +24,15 @@ In the industry, most solutions adapted the architecture with 3 component: retri
 ### Retrival
 
 
+## Applications
+
+### E-commerce
+
+- Home page
+- Product details page (PDP)
+- search page 
+- event page
+
 ## Reference
 
 [1] https://developers.google.com/machine-learning/recommendation
